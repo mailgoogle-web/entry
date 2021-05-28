@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="main.js"></script>
+<title>enter</title>
+<style>
+    #header{
+        width: 100%;
+        height:120px;
+        display: flex;
+        position: relative;
+        border-bottom:solid black 1px ;
+    }
+    #allow{
+        height: 40%;
+        position: absolute;
+        left:30px;
+        top: 31px;
+        
+    }
+    #boxes{
+        position: absolute;
+        height: 40%;
+        right: 30px;
+        top: 30px;
+    }
+    #main{
+        font-size: 160px;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+    #main p{
+        margin:5px 0 5px 0;
+        font-family:Arial;
+    }
+    #space{
+        margin-top: 200px;
+    }
+    .maeoki{
+        font-size: 30px;
+        font-family:Arial;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <img src="allow.PNG" id="allow">
+        <img src="boxes.PNG" id="boxes">
+    </div>
+    <div id="maeoki">
+        <p>※本メールは自動返信です。入構可の場合は守衛に以下を提示し、入構してください。</p>
+           <p> *This email is an automatic reply. If you are able to enter, please present the following to the guard when you enter.</p>
+            <p id="space">===</p>
+    </div>
+    <div id="main">
+        <p id="date"><span id ="yyyy"></span>/<span id="mm"></span>/<span id ="dd"></span></p>
+        <p>【入構可】</p>
+        <p>[ENTRY OK]</p>
+    </div>
+
+    <div id="footer">
+        <p>健康管理情報の報告ありがとうございます。</p>
+            <p>Thank you for reporting the health management information.</p>
+           <p>===</p>
+
+    </div>
+
+        
+    </div>
+    <script>
+        var today = new Date();
+        var tY = today.getFullYear();
+        var tM = today.getMonth()+1;
+        var tD = today.getDate();
+        console.log(tY);
+
+        
+
+        window.onload = function(){
+            document.getElementById("yyyy").innerHTML= tY;
+            document.getElementById("mm").innerHTML= tM;
+            document.getElementById("dd").innerHTML= tD;
+        };
+    </script>
+
+</body>
+</html>
