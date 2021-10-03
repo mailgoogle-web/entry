@@ -113,7 +113,7 @@
 申請/利用予約：【入構する日】入構申請（入構当日に毎回必要。博物館訪問含む）<br>
 ----------------<br>
 予約日時：<span id ="yyyyy"></span>年<span id="mmm"></span>月<span id ="ddd"></span>日(<span id ="dfw"></span>) <span id ="hh"></span>時<span id ="min"></span>分<br>
-予約番号：IEB_210915_4410782940_1<br>
+予約番号：IEB_<span id="yyyyyy"></span><span id="mmmm"></span><span id="dddd"></span>_4410782940_1<br>
 +++-----------------------------+++<br>
 <br>
 +++-----------<br>
@@ -190,6 +190,9 @@ E-mail: komaba-booking-group@g.ecc.u-tokyo.ac.jp<br>
             document.getElementById("yyyyy").innerHTML= tY;
             document.getElementById("mmm").innerHTML= tM;
             document.getElementById("ddd").innerHTML= tD;
+            document.getElementById("yyyyyy").innerHTML= tY-2000;
+            document.getElementById("mmmm").innerHTML= tM;
+            document.getElementById("dddd").innerHTML= tD;
         };
 
         document.getElementById("hongo").onclick=function(){
